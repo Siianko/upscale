@@ -13,7 +13,7 @@ require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
 
-module Boilerplate
+module Upscale
   class Application < Rails::Application
     config.load_defaults 5.2
     config.generators do |generate|
