@@ -12,12 +12,13 @@ Then("I click on {string} link") do |new_task|
     click_link new_task
 end
 
-Then("there should be a New Task in the database") do
-pending # Write code here that turns the phrase above into concrete actions
+Then("there should be a {string} in the database") do |task_title|
+    task = Task.find_by(title: task_title)
+    expect(current_path).to eq root_path(task)
 end
 
-Then("I should see {string}") do |string|
-pending # Write code here that turns the phrase above into concrete actions
+Then("I should see {string}") do |content|
+    expect(page).to have_content content
 end
 
 Then("I click on {string}") do |button|
