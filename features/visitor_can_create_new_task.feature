@@ -11,6 +11,7 @@ Feature: A visitor can create new task
         And I fill in 'Description' with 'Really old table that needs refurnishing'
         And I fill in 'Budget' with '100'
         And I fill in 'Location' with 'Stockholm'
+        Then show me the page
         And I click on 'Post Task'
         Then there should be a New Task in the database
         And I should see 'Task successfully created'

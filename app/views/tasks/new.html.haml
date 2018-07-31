@@ -6,7 +6,9 @@
     = form.text_area :description
     %br
     = form.label :budget
-    = form.number_field :budget
+    = form.text_field :budget
     %br
     = form.label :location
     = form.text_field :location
+    %br
+    = form.submit 'Post Task'
