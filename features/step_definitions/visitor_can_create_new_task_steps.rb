@@ -1,5 +1,3 @@
-
-
 Then("I should be on New Task page") do
     visit new_task_path
 end
