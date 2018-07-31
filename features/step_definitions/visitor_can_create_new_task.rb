@@ -21,5 +21,5 @@ pending # Write code here that turns the phrase above into concrete actions
 end
 
 Then("I click on {string}") do |button|
-    click_button button
+    click_on(button)
 end
