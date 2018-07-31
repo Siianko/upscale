@@ -10,6 +10,7 @@ In order to get you started with Rails, we've set up a boilerplate application u
 ## Setup
 
 1 Copy the url an clone the repository to you `localhost`
+
 2 Open the `config/application.rb` and chage the application name from `Boilerplate` to `YourApp`
 
   
