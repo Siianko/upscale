@@ -10,9 +10,8 @@ Then("I click on {string} link") do |link|
     click_link link
 end
 
-Then("there should be a {string} in the database") do |task_title|
-    task = Task.find_by(title: task_title)
-    expect(current_path).to eq root_path
+Then("there should be a {string} in the database") do |count|
+    expect(Task.count).to eq 1
 end
 
 Then("I should see {string}") do |content|
