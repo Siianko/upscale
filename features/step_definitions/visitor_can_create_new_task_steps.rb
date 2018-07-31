@@ -6,8 +6,8 @@ Then("I fill in {string} with {string}") do |field, content|
     fill_in field, with: content
 end
 
-Then("I click on {string} link") do |new_task|
-    click_link new_task
+Then("I click on {string} link") do |link|
+    click_link link
 end
 
 Then("there should be a {string} in the database") do |task_title|
