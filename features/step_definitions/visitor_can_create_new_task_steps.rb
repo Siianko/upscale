@@ -12,7 +12,7 @@ end
 
 Then("there should be a {string} in the database") do |task_title|
     task = Task.find_by(title: task_title)
-    expect(current_path).to eq root_path(task)
+    expect(current_path).to eq root_path
 end
 
 Then("I should see {string}") do |content|
