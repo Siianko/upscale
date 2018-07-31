@@ -20,5 +20,5 @@ Then("I should see {string}") do |content|
 end
 
 Then("I click on {string}") do |button|
-    click_on(button)
+    click_on button
 end
