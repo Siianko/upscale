@@ -18,7 +18,7 @@ RSpec.describe Task, type: :model do
 
   describe 'Factory' do
     it 'should have valid Factory' do
-      expect(FactoryBot.create(:task)).to be_valid 
+      expect(create(:task)).to be_valid
     end
   end
 end
