@@ -3,11 +3,13 @@ Feature: A visitor can create new task
     In order to get my furniture refurbished
     I would to be able create a new task
 
-    Scenario: Create task [Happy path]
+    Background:
         When I am at the index page
         And I click on 'New Task' link
         Then I should be on New Task page
-        And I fill in 'Title' with 'My Task'
+    
+    Scenario: Create task [Happy path]
+        When I fill in 'Title' with 'My Task'
         And I fill in 'Description' with 'Really old table that needs refurnishing'
         And I fill in 'Budget' with '100'
         And I fill in 'Location' with 'Stockholm'
@@ -16,10 +18,7 @@ Feature: A visitor can create new task
         And I should see 'Task successfully created'
 
     Scenario: Create Task [Sad Path]
-        When I am at the index page
-        And I click on 'New Task' link
-        Then I should be on New Task page
-        And I fill in 'Title' with 'My Task'
+        When I fill in 'Title' with 'My Task'
         And I fill in 'Description' with ''
         And I fill in 'Budget' with '100'
         And I fill in 'Location' with 'Stockholm'
