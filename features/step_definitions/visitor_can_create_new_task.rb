@@ -1,11 +1,11 @@
 
 
-Then("I should be on {string} page") do |string|
-pending # Write code here that turns the phrase above into concrete actions
+Then("I should be on New Task page") do
+    visit new_task_path
 end
 
-Then("I fill in {string} with {string}") do |string, string2|
-pending # Write code here that turns the phrase above into concrete actions
+Then("I fill in {string} with {string}") do |field, content|
+    fill_in field, with: content
 end
 
 Then("I click on {string} link") do |new_task|

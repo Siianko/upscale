@@ -1,0 +1,12 @@
+= form_with model: @tasks, remote: false do |form|
+    = form.label :title
+    = form.text_field :title
+    %br
+    = form.label :description
+    = form.text_area :description
+    %br
+    = form.label :budget
+    = form.number_field :budget
+    %br
+    = form.label :location
+    = form.text_field :location

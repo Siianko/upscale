@@ -6,7 +6,7 @@ Feature: A visitor can create new task
     Scenario: Create task
         When I am at the index page
         And I click on "New Task" link
-        Then I should be on "New Task" page
+        Then I should be on New Task page
         And I fill in "Title" with "My Task"
         And I fill in 'Description' with 'Really old table that needs refurnishing'
         And I fill in 'Budget' with '100'
