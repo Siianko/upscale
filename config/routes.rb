@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'tasks/index'
   root controller: :tasks, action: :index
+
+  resources :tasks, only: [:new, :create, :show]
 end
