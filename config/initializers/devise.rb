@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '32298a928872cbe6825d56369740b5b9f71172d7312d0fd8f3a1503f7fea2adce2153b36a8b4f751beeea24e7320f9751ae2d000d4b9fb1c7d900321b6cd002e'
+   config.secret_key = '32298a928872cbe6825d56369740b5b9f71172d7312d0fd8f3a1503f7fea2adce2153b36a8b4f751beeea24e7320f9751ae2d000d4b9fb1c7d900321b6cd002e'
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -280,5 +280,4 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
-  config.secret_key = '05eacec6ed6774aae3ebcee48ff3764badea63e3a4f53162199c68461acd52d5cdb12e2fa55017e9a45609f62645bed76018b637e8a82fede024f0604024fb2d'
 end
