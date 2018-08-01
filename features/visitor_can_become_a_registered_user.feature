@@ -13,6 +13,5 @@ Feature: Visitor can become a registered user
         And I fill in 'Password confirmation' with 'my-password'
         And I click on 'Sign up'
         Then I should see 'Welcome! You have signed up successfully'
-        #And I should be sent to 'customer page'
 
     
