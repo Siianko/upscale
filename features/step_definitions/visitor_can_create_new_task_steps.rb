@@ -21,3 +21,7 @@ end
 Then("I click on {string}") do |button|
     click_on button
 end
+
+Then("I should be sent to the Sign In page") do
+pending # Write code here that turns the phrase above into concrete actions
+end
