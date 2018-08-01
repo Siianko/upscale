@@ -21,3 +21,22 @@ end
 Then("I click on {string}") do |button|
     click_on button
 end
+
+Then("I should be sent to the Sign In page") do
+    expect(current_path).to eq new_user_session_path
+end
+
+Given("the following users exist") do |table|
+    table.hashes.each do |user_hash|
+        FactoryBot.create(:user, user_hash)
+    end
+end
+
+Given("I am logged in as {string}") do |email|
+    user = User.find_by(email: email)
+    login_as(user, scope: :user)
+end
+
+Given("that I am logged out") do
+    logout
+end
