@@ -17,6 +17,7 @@ gem 'devise'
 
 
 group :development, :test do
+  gem 'coveralls', require: false
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
