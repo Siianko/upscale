@@ -10,8 +10,8 @@ Then("I click on {string} link") do |link|
     click_link link
 end
 
-Then("there should be a {string} in the database") do |count|
-    expect(Task.count).to eq 1
+Then("there should be a Task titled {string} in the database") do |expected_title|
+    expect(Task.last.title).to eq expected_title
 end
 
 Then("I should see {string}") do |content|
