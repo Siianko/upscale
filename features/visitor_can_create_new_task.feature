@@ -4,7 +4,11 @@ Feature: A visitor can create new task
     I need to be a registered user
 
     Background:
-        Given I am on New Task page
+        Given the following users exist
+        |email          |
+        |pablo@test.com |
+        And I am logged in as 'pablo@test.com'
+        And I am on New Task page
 
     Scenario: Create task as a registered user [Happy path]
         When I fill in 'Title' with 'My Task'
@@ -24,6 +28,7 @@ Feature: A visitor can create new task
         And I should see 'Your Task could not be created'
 
     Scenario: Visitor can NOT create a new Task
+        Given that I am logged out
         When I am at the index page
         And I click on 'New Task' link
         Then I should be sent to the Sign In page
