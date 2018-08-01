@@ -4,9 +4,7 @@ Feature: A visitor can create new task
     I would to be able create a new task
 
     Background:
-        When I am at the index page
-        And I click on 'New Task' link
-        Then I should be on New Task page
+        Given I am on New Task page
     
     Scenario: Create task [Happy path]
         When I fill in 'Title' with 'My Task'
