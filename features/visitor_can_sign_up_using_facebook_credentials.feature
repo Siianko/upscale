@@ -8,7 +8,7 @@ Feature: User can login using Facebook
 
 
     Scenario: Visitor clicks on "Login with Facebook" and gets authenticated
-        Given I am at the index page
+        Given I am on the landing page
         And I click on "Log in with Facebook"
         Then I should be on the Landing page
         And I should see "Successfully authenticated from Facebook account"
