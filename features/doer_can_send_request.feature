@@ -3,8 +3,6 @@ Feature: Doer accepts the given condition for the task
     If I see the task to work on,
     I would like to be able to agree on the proposal.
 
-    PT: https://www.pivotaltracker.com/story/show/159492933
-
     Background:
         Given the following user is logged in
         | email          |
