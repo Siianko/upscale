@@ -13,3 +13,9 @@ end
 Then("I should be on the Landing page") do
     expect(current_path).to eq root_path
 end
+
+Then("I should be on {string} page") do |task_name|
+    task = Task.find_by(title: task_name)
+    expect(current_path).to eq task_path(task.id)
+end
+  
