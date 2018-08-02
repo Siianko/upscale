@@ -17,5 +17,5 @@ Feature: Task Page
         And I should see 'Really old table that needs refurnishing'
         And I should see 'Stockholm'
         And I should see '100'
-        And I should see 'Accept the task'
-        And I should see 'Counter offer'
+        And I should see 'Let's do it'
+        And I should see 'Send Counter offer'
