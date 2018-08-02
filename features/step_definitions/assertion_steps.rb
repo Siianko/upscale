@@ -9,3 +9,7 @@ end
 Then("I should be sent to the Sign In page") do
     expect(current_path).to eq new_user_session_path
 end
+
+Then("I should be on the Landing page") do
+    expect(current_path).to eq root_path
+end
