@@ -29,6 +29,6 @@ Feature: A visitor can create new task
 
     Scenario: Visitor can NOT create a new Task
         Given that I am logged out
-        When I am at the index page
+        When I am on the landing page
         And I click on 'New Task' link
         Then I should be sent to the Sign In page
