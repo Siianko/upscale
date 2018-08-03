@@ -15,7 +15,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'omniauth-facebook', '~> 4.0'
-
+gem 'state_machines-activerecord'
 gem 'sprockets', '~> 3.7.2'
 
 
@@ -24,6 +24,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'state_machines-rspec'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
   gem 'cucumber-rails', '~> 1.6', require: false

@@ -4,7 +4,5 @@
 %p= @task.budget
 %p= @task.state
 
-= link_to "Lets do it", task_path
-= link_to "Counter offer"
-
-= notice
+= link_to "Let's do it", task_path(@task, action: :accept), method: :put
+= link_to "Send Counter offer", '#'

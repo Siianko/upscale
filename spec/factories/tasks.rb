@@ -4,5 +4,6 @@ FactoryBot.define do
     description "MyText"
     location "MyString"
     budget 1
+    state :open
   end
 end

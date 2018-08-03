@@ -19,6 +19,6 @@ Feature: Doer accepts the given condition for the task
         And I should see 'Open'
 
     Scenario: Doer accepts to work on task
-        When I click on 'Lets do it'
+        When I click on 'Let\'s do it'
         Then I should see 'Task poster has been notified - your interest has been submitted.'
         And the state of the task is 'Pending'
