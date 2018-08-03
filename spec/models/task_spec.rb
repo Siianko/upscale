@@ -24,6 +24,10 @@ RSpec.describe Task, type: :model do
     end
   end
 
+  describe 'Associations' do  
+    it {is_expected.to belong_to :user}
+  end
+
   describe 'Status - Checking for States, Events and Transistions' do
     subject { create(:task) }
     

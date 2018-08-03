@@ -18,4 +18,15 @@ Then("I should be on {string} page") do |task_name|
     task = Task.find_by(title: task_name)
     expect(current_path).to eq task_path(task.id)
 end
+
+Then("the state of the task {string} is {string}") do |task_title, state|
+    task = Task.find_by(title: task_title)
+    expect(task.state).to eq state.downcase
+end
+
+
+Then("I would like an email to be sent to {string}") do |email|
+    open_email_for(email)
+    expect(current_email).not_to be nil
+end
   

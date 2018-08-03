@@ -14,3 +14,18 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener('turbolinks:load', function () {
+    var letsDoItLink = document.getElementById('lets-do-it')
+    var stateElement = document.getElementById('state')
+    if (stateElement && letsDoItLink) {
+        letsDoItLink.addEventListener('ajax:success', function (event) {
+            var noticeElement = document.createElement('div')
+            noticeElement.innerHTML = '<p>' + event.detail[0].message + '</p>'
+            var state = event.detail[0].task.state
+            stateElement.innerHTML = state.charAt(0).toUpperCase() + state.slice(1);
+            document.body.appendChild(noticeElement)
+        })
+    }
+})
+
