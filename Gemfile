@@ -32,6 +32,7 @@ group :development, :test do
   gem 'launchy'
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
+  gem 'email_spec'
 end
 
 group :development do

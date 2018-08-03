@@ -2,6 +2,7 @@ require 'coveralls'
 Coveralls.wear_merged!('rails')
 
 require 'cucumber/rails'
+require 'email_spec/cucumber'
 require_relative './oauth'
 
 ActionController::Base.allow_rescue = false

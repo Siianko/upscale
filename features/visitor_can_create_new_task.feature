@@ -7,6 +7,7 @@ Feature: A visitor can create new task
         Given the following users exist
         |email          |
         |pablo@test.com |
+        
         And I am logged in as 'pablo@test.com'
         And I am on New Task page
 
