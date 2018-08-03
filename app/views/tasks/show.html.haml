@@ -2,7 +2,7 @@
 %p= @task.description
 %p= @task.location
 %p= @task.budget
-%p= @task.state
+%p= @task.state.titleize
 
-= link_to "Let's do it", task_path(@task, action: :accept), method: :put
+= link_to "Let's do it", task_path(@task, event: :receive_bid), method: :put, remote: true
 = link_to "Send Counter offer", '#'

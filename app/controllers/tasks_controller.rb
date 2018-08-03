@@ -23,6 +23,16 @@ class TasksController < ApplicationController
     end
   end
 
+  def update 
+    @task = Task.find(params[:id])
+    if params[:event] == 'receive_bid'
+      @task.receive_bid
+      #@task.send(:receive_bid)
+      #@task.send(params[:event].to_sym)
+    end
+    binding.pry
+  end
+
   private
 
   def task_params
