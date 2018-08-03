@@ -40,8 +40,17 @@ RSpec.describe NotificationsMailer, type: :mailer do
     expect(subject.to).to eq ["pablo@test.com"]
   end
 
-  it "sets the body" do
-    expect(subject.body.encoded).to match("Hello Pablo Pablito just accepted your task. Reach out to him/her on pablito@test.com") 
+ # it "sets the body" do
+ #   expect(subject.body).to match "Hello Pablo Pablito just accepted your task. Reach out to him/her on pablito@test.com"
+ # end
+
+ it "renders the body" do
+  expect(subject.body.encoded).to match("Hello")
+  expect(subject.body.encoded).to match("Pablo")
+end
+
+  it "renders the body line" do
+    expect(subject.body.encoded).to match("accepted")
   end
 
 end

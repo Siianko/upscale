@@ -1,7 +1,7 @@
 require 'coveralls'
 Coveralls.wear_merged!('rails')
-#require 'email_spec'
-#require 'email_spec/rspec'
+require 'email_spec'
+require 'email_spec/rspec'
 #require 'active_job'
 
 RSpec.configure do |config|
