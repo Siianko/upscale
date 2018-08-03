@@ -4,10 +4,14 @@ Feature: Task Page
     I would like to see a task page with more detailed information
 
     Background:
-        Given the following task exists
-        |title        |description                              |location    |budget|
-        |My Task      |Really old table that needs refurnishing |Stockholm   |100   |
-        |My Task New  |Ugly new chair                           |Uppsala     |200   |
+        Given the following users exist
+            | email          |
+            | pablo@test.com |
+
+        And the following task exists
+            | title       | description                              | location  | budget | user           |
+            | My Task     | Really old table that needs refurnishing | Stockholm | 100    | pablo@test.com |
+            | My Task New | Ugly new chair                           | Uppsala   | 200    | pablo@test.com |
 
     Scenario:
         When I am on the landing page

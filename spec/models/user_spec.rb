@@ -7,6 +7,11 @@ RSpec.describe User, type: :model do
         it { is_expected.to have_db_column :encrypted_password }
     end
 
+
+    describe 'Associations' do  
+        it {is_expected.to have_many :tasks}
+    end
+
     describe "Factory" do
         it "for :user is valid" do
           expect(create(:user)).to be_valid

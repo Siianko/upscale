@@ -5,5 +5,6 @@ FactoryBot.define do
     location "MyString"
     budget 1
     state :open
+    user
   end
 end

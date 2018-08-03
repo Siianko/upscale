@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
+    @task = current_user.tasks.create(task_params)
     if @task.persisted?
       redirect_to root_path, notice: "Task successfully created"
     else
@@ -23,9 +23,18 @@ class TasksController < ApplicationController
     end
   end
 
+  def update 
+    @task = Task.find(params[:id])
+    if params[:event] == 'receive_bid'
+      @task.receive_bid
+    end
+    NotificationsMailer.with(doer: current_user, task: @task).task_started.deliver_now
+    render json: {message: "Task poster has been notified - your interest in working on #{@task.title} has been submitted.", task: @task}
+  end
+
   private
 
   def task_params
-    params.require(:task).permit(:title, :description, :budget, :location)
+    params.require(:task).permit(:title, :description, :budget, :location, :state)
   end
 end

@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   validates_presence_of :name
+
+  has_many :tasks
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

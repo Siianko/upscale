@@ -1,6 +1,8 @@
 class Task < ApplicationRecord  
     validates_presence_of :title, :description, :budget, :location, :state
 
+    belongs_to :user
+
     state_machine :state, initial: :open do 
         
         event :receive_bid do 
