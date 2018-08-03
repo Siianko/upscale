@@ -30,6 +30,8 @@ group :development, :test do
   gem 'cucumber-rails', '~> 1.6', require: false
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
 end
 
 group :development do

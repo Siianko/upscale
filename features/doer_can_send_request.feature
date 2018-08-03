@@ -1,3 +1,4 @@
+@javascript
 Feature: Doer accepts the given condition for the task
     As a Doer, 
     If I see the task to work on,
@@ -21,4 +22,5 @@ Feature: Doer accepts the given condition for the task
     Scenario: Doer accepts to work on task
         When I click on 'Let\'s do it'
         Then I should see 'Task poster has been notified - your interest has been submitted.'
-        And the state of the task is 'Pending'
+        Then wait 1 second
+        And the state of the task 'My Task' is 'Pending'

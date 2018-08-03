@@ -25,3 +25,7 @@ end
 Then("I click on {string}") do |button|
     click_on button
 end
+
+Then("wait {int} second") do |sec|
+    sleep sec
+end

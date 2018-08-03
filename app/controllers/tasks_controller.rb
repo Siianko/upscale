@@ -30,7 +30,7 @@ class TasksController < ApplicationController
       #@task.send(:receive_bid)
       #@task.send(params[:event].to_sym)
     end
-    binding.pry
+    render json: {message: 'Task poster has been notified - your interest has been submitted.', task: @task}
   end
 
   private

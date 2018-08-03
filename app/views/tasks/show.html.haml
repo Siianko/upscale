@@ -2,7 +2,22 @@
 %p= @task.description
 %p= @task.location
 %p= @task.budget
-%p= @task.state.titleize
+%p#state= @task.state.titleize
 
-= link_to "Let's do it", task_path(@task, event: :receive_bid), method: :put, remote: true
+= link_to "Let's do it", task_path(@task, event: :receive_bid), method: :put, remote: true, id: 'lets-do-it'
 = link_to "Send Counter offer", '#'
+
+
+:javascript
+    var letsDoItLink = document.getElementById('lets-do-it')
+    var stateElement = document.getElementById('state')
+    letsDoItLink.addEventListener('ajax:success', function(event){
+        var noticeElement = document.createElement('div')
+        noticeElement.innerHTML = '<p>' + event.detail[0].message + '</p>'
+        var state = event.detail[0].task.state 
+        stateElement.innerHTML = state.charAt(0).toUpperCase() + state.slice(1);
+        document.body.appendChild(noticeElement)
+    })
+
+
+

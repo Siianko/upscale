@@ -18,3 +18,22 @@ Before do
 end
 
 Cucumber::Rails::Database.javascript_strategy = :truncation
+
+Chromedriver.set_version '2.36'
+
+chrome_options = %w(no-sandbox disable-popup-blocking disable-infobars)
+
+Capybara.register_driver :chrome do |app|
+  options = Selenium::WebDriver::Chrome::Options.new(
+      args: chrome_options
+  )
+  Capybara::Selenium::Driver.new(
+      app,
+      browser: :chrome,
+      options: options
+  )
+end
+
+Capybara.javascript_driver = :chrome
+
+

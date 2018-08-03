@@ -19,8 +19,8 @@ Then("I should be on {string} page") do |task_name|
     expect(current_path).to eq task_path(task.id)
 end
 
-Then("the state of the task is {string}") do |string|
-    task = Task.last
-    expect(task.state).to eq string
+Then("the state of the task {string} is {string}") do |task_title, state|
+    task = Task.find_by(title: task_title)
+    expect(task.state).to eq state.downcase
 end
   
