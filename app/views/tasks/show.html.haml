@@ -2,6 +2,9 @@
 %p= @task.description
 %p= @task.location
 %p= @task.budget
+%p= @task.state
 
-= link_to "Accept the task"
+= link_to "Lets do it", task_path
 = link_to "Counter offer"
+
+= notice

@@ -26,6 +26,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :description, :budget, :location)
+    params.require(:task).permit(:title, :description, :budget, :location, :state)
   end
 end
