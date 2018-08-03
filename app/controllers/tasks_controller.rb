@@ -27,10 +27,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     if params[:event] == 'receive_bid'
       @task.receive_bid
-      #@task.send(:receive_bid)
-      #@task.send(params[:event].to_sym)
     end
-    # Send email to creator of the task
     NotificationsMailer.with(doer: current_user, task: @task).task_started.deliver_now
     render json: {message: "Task poster has been notified - your interest in working on #{@task.title} has been submitted.", task: @task}
   end

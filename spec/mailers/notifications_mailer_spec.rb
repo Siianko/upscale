@@ -18,9 +18,9 @@ RSpec.describe NotificationsMailer, type: :mailer do
   end
 
   it "Check for Hello, name and email in the body of the message" do
-  expect(subject.body).to match("Hello")
-  expect(subject.body).to match("Pablo")
-  expect(subject.body).to match("pablito@test.com")
+    expect(subject.body).to match("Hello")
+    expect(subject.body).to match("Pablo")
+    expect(subject.body).to match("pablito@test.com")
   end
 
 end
