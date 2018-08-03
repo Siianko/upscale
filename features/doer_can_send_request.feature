@@ -21,6 +21,6 @@ Feature: Doer accepts the given condition for the task
 
     Scenario: Doer accepts to work on task
         When I click on 'Let\'s do it'
-        Then I should see 'Task poster has been notified - your interest has been submitted.'
+        Then I should see 'Task poster has been notified - your interest in working on My Task has been submitted.'
         Then wait 1 second
         And the state of the task 'My Task' is 'Pending'
